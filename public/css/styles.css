@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+/* VARIABAES */ 
+:root {
+    /* Variable de colores */
+    --amarillo: #EAC926;
+    --azul: #03264C;
+    --celeste: #1259c3;
+    --gris-oscuro: #666;
+    --gris-claro: #ebebeb;
+    --verde: #39b54a;
+    /* Fuentes */
+    --fuente: 'Roboto', sans-serif;
+    /* Tamaños tipográficos*/
+    --parrafos: 12px;
+    --titulos: 24px;
+    --precio: 18px;
+    --descuento: 16px;
+    --descripcion: 16px; 
+}
+
+/* ESTILOS GENERALES */
+/* selector * significa que a todos los elementos del * le coloque todas esas propiedades*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fuente);
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    font-size: var(--parrafos)
+}
+
+body {
+    background-color: var(--gris-claro); 
+}
+
+/* HEADER */
+
+header {
+    background-color: var(--amarillo);
+    padding: 25px 0;
+}
+
+header .container__logo--busqueda{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+header div.logo {
+    width: 50%;
+}
+
+header div.busqueda {
+    margin-left: 15px;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.header__cuotas--container {
+    display: flex;
+    text-align: center;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.header__categories{
+    display: none;
+}
+
+header div.burger-menu {
+    background-color: var(--celeste);
+    border-radius: 5px;
+    color: white;
+    max-width: 30px;
+    padding: 7px;
+    margin: 25px auto 0;
+    /* si quiero colocar 3 valores seria: top right-left bottom */
+    /* si quiero colocar 4 valores: top right borrom left */ 
+}
+
+/* PRODUCTOS */
+
+main.home__productos {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.seccion__productos--global{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.seccion__productos--tarjeta{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 5px 5px 15px rgba(0,0, 0, 0.3);
+    box-sizing: border-box;
+    margin: 0.5rem;
+    max-width: 200px;
+    min-height: 236px;
+    width: 50%;
+    flex-grow: 1;
+    transition: all 450ms;
+}
+
+.seccion__productos--tarjeta:hover {
+    box-shadow: 5px 5px 10px rgb(100, 100, 100);
+}
+
+.home__product--details{
+    border-top: 1px solid var(--gris-claro);
+    padding: 15px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+}
+
+.home__product--details .price{
+    display: flex;
+    width: 30%;
+    padding-bottom: 1rem;
+    position: relative;
+    padding-left: 1.5px;
+}
+
+.title__products {
+    display: none;
+}
+
+/* ESTILOS Y COLORES*/
+.text-green {
+    color: var(--verde);
+    display: flex;
+    width: 70%;
+    margin-left: 5px;
+}
+
+a.home__second--title {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 0.5;
+    text-align: center;
+}
+
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--verde);
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    color: var(--verde);
+}
+
+/* FOOTER */
+
+footer.footer__container {
+    width: 100%;
+    padding: 50px 10px 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer article {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+footer article i {
+    font-size: 2em;
+    color: var(--celeste);
+    margin-bottom: 10px;
+
+}
+
+footer span {
+    font-size: var(--parrafos);
+}
+
+
+/* MEDIAS QUERIES */
+
+/* Tablets */
+@media (min-width: 480px){
+    .header__search--logo{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .container__logo--busqueda{
+        display: flex;
+        width: 100%;
+    }
+    .header__cuotas--container{
+        display: flex;
+        width: 50%;
+    }
+    .header__categories{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header nav ul.lista-superior , .lista-inferior {
+        display: flex;
+        width: 40%;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 400;
+        font-size: 0.7rem;
+        position: relative;
+        padding: 5px 1rem;
+        flex-direction: row;
+        margin-bottom: 15px;
+    }
+    header nav ul li a {
+        font-size: var(--parrafos);
+    }
+    div.burger-menu{
+        display: none;
+    }
+    .title__products {
+        display: flex;
+        font-weight: 400;
+        align-items: center;
+    }
+    .text-green {
+        display: flex;
+        width: fit-content;
+        margin-left: 25px;
+    }
+}
+
+@media (min-width:700px){
+
+    .seccion__productos--tarjeta{
+        margin: 5vw;
+        padding: 25px;
+        background-color: white;
+    }
+}
+
+
+/* Desktop */
+
+@media(min-width:1031px){
+    .seccion__productos--tarjeta{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        box-shadow: 5px 5px 15px rgba(0,0, 0, 0.3);
+        box-sizing: border-box;
+        margin: 1rem;
+        min-width: 200px;
+        min-height: 236px;
+        width: 50%;
+        flex-grow: 1;
+        transition: all 450ms;
+    }
+}

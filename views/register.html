@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/forms.css">
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
+        <title>Register</title>
+    </head>
+    
+    <body>
+        <header>
+            <div class="header__search--logo">
+                <div class="container__logo--busqueda">
+                    <div class="logo">
+                        <a href="/"> <img src="/images/logo-mercado-liebre.svg" alt=""> </a>
+                    </div>
+
+                    <!-- <div class="busqueda">
+                        <input type="text" placeholder="Buscar productos, marcas ...">
+                        <button>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div> -->
+                </div>
+
+                <div class="header__cuotas--container"><p><i class="fas fa-hand-holding-usd"></i> Comprá en cuotas y sin tarjeta de crédito</p></div>
+            </div>
+                
+
+            <!-- <nav class="header__categories">
+                <ul class="lista-superior">
+                    <li> <a href="">Ofertas </a></li>
+                    <li> <a href="">Tiendas Oficiales</a></li>
+                    <li> <a href="">Vender</a></li>
+                    <li> <a href="">Ayuda</a></li>
+                </ul>
+                <ul class="lista-inferior">
+                    <li> <a href="">Crea tu cuenta <i class="fas fa-credit-card"> </i></a></li>
+                    <li> <a href="">Ingresá <i class="fas fa-sign-in-alt "></i> </a></li>
+                    <li> <a href="">Más compras <i class="fas fa-shopping-basket "></i> </a></li>
+                </ul> -->
+            </nav>
+
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+        </header>
+        <div class="register__container--global register__first">
+            <h2 class="register__title">Registro</h2>
+            <hr>
+            <form action="" method="post" class="register__container">
+                <div class="container__desktop">
+                    <div class="box__datos">
+                        <div class="input__container">
+                            <!-- <label for="text">Nombre y Apellido</label> -->
+                            <input class="input-style" type="text" name="user" placeholder="Nombre y apellido" id="">
+                        </div>
+                        <div class="input__container">
+                            <!-- <label for="text">Nombre de usuario</label> -->
+                            <input class="input-style" type="text" name="name__user" placeholder="Nombre de usuario" id="">
+                        </div>
+                        <div class="input__container">
+                            <!-- <label for="email"> Email</label> -->
+                            <input class="input-style" type="email" name="email" placeholder="Email" id="">
+                            <span class="error--message">Debe ingresar su email</span>
+                        </div>
+                        <div class="input__container">
+                            <label for="password">Contraseña</label>
+                            <input class="input-style" type="password" name="pass" placeholder="Escribe tu contraseña aquí" id="" required>
+                            <span class="error--message">Debe ingresar su contraseña</span>
+                        </div>
+                        <div class="input__container">
+                        <label for="password_security">Confirmar contraseña</label>
+                            <input class="input-style" type="pass2" name="password" placeholder="Escribe tu contraseña aquí" id=""> 
+                            <span class="error--message">Debe re-ingresar su contraseña</span>
+                        </div>
+                    </div>
+                    <div class="box__profile">
+                            <div class="input__container">
+                            <label for="">Fecha de nacimiento</label>
+                            <input class="input-style" type="date" name="date__of--birth">
+                        </div>
+                        <div class="input__container">
+                            <label for="user">Perfil del usuario</label>
+                            <label for=""><input class="input" type="radio" name="type__of--user" value="Comprador"> Comprador</label>
+                            <label for=""><input class="input" type="radio" name="type__of--user" value="Vendedor"> Vendedor</label>
+                        </div>
+                        <div class="input__container">
+                            <label for="text">Intereses</label>
+                            <label for=""><input type="checkbox" name="interests" value="Electrodomésticos"> Electrodomésticos</label>
+                            <label for=""><input type="checkbox" name="interests" value="Moda"> Moda</label>
+                            <label for=""><input type="checkbox" name="interests" value="Hogar"> Hogar</label>
+                            <label for=""><input type="checkbox" name="interests" value="Juguetería"> Juguetería</label>
+                            <label for=""><input type="checkbox" name="interests" value="Vida Sana"> Vida Sana</label>
+                        </div>
+                        <div class="input__container input__photo">
+                            <label for="">Elija su foto de perfil</label>
+                            <input class="input" type="file" name="photo" id="" accept=".jpg,.png">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="check">
+                    <div>
+                        <label for="terms">Acepto los <a href="">términos y condiciones</a> </label>
+                        <input type="checkbox" name="terms" id="recordar">
+                    </div>
+                    <span class="error--message">Debe aceptar los términos y condiciones</span>
+                </div>
+                <div class="button__container">
+                    <span class="error--message">Credenciales inválidas</span>
+                    <button type="submit" class="btn btn__submit">Registrarme</button>
+                </div>
+                <div  class="button__container">
+                    <a href=""></a><button type="reset" class="btn btn__submit">  Borrar</button></a>
+                </div>
+                <div  class="button__container">
+                    <a href="/"></a><button type="submit" class="btn btn__submit"> Enviar </button></a>
+                </div>
+            </form>
+        </div>
+
+
+        <footer class="footer__container">
+            <article>
+                <i class="fa-solid fa-credit-card"></i>
+                <h4>Pagá con tarjeta o en efectivo </h4>
+                <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro! </p>
+            </article>
+            <article>
+                <i class="fa-solid fa-gift"></i>
+                <h4>Envío gratis desde $ 2.500 </h4>
+                <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
+            </article>   
+            <article>
+                <i class="fa-solid fa-user-shield"></i>
+                <h4>Seguridad, de principio a fin </h4>
+                <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@. </p>
+            </article>
+            <span>
+                Copyright ©️ 1999-2020 MercadoLiebre S.R.L.
+            </span>
+        </footer>
+    
+
+    </body>
+</html>
