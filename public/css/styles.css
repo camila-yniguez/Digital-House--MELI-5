@@ -178,9 +178,18 @@ main section article i{
     color: var(--verde);
 }
 
+main section article:hover > div.home__product--details > h5 {
+    display: block;
+}
+
+main section article div span.btn__container--truck i:hover {
+    transform: rotateZ(-90deg);
+    transition: all 550ms;
+}
+
 /* FOOTER */
 
-footer.footer__container {
+footer.footer__container--global {
     width: 100%;
     padding: 50px 10px 10px;
     background-color: white;
@@ -199,11 +208,16 @@ footer article i {
     font-size: 2em;
     color: var(--celeste);
     margin-bottom: 10px;
+    transition: all 450ms;
+}
 
+footer article i:hover {
+    color:#0022AA;
 }
 
 footer span {
     font-size: var(--parrafos);
+    margin-bottom: 50px;
 }
 
 
@@ -246,7 +260,11 @@ footer span {
     div.burger-menu{
         display: none;
     }
-    .title__products {
+    .title__products{
+        display: none;
+        transition: all 2s ease;
+    }
+    .title__products:hover {
         display: flex;
         font-weight: 400;
         align-items: center;
@@ -283,5 +301,30 @@ footer span {
         width: 50%;
         flex-grow: 1;
         transition: all 450ms;
+    }
+    .footer__container--global{
+        display: inherit;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start; 
+        width: 100%;   
+    }
+    .section__footer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;    
+        width: 100%;
+    }
+    .footer__card--container{
+        display: flex;
+        flex-direction: column;
+        max-width: 350px;
+        justify-content: space-between;
+    }
+    .footer__copy{
+        display: inline;
+        position: relative;
+        width: 100%;
     }
 }

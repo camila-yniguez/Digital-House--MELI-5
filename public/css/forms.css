@@ -176,7 +176,7 @@ input.input-style::placeholder {
 }
 
 .btn__submit:hover{
-    background-color: var(--celeste);
+    background-color: #0022AA;
 }
 
 .ckeck{
@@ -205,7 +205,7 @@ input.input-style::placeholder {
 
 /* FOOTER */
 
-footer.footer__container {
+footer.footer__container--global {
     width: 100%;
     padding: 50px 10px 10px;
     background-color: white;
@@ -224,11 +224,17 @@ footer article i {
     font-size: 2em;
     color: var(--celeste);
     margin-bottom: 10px;
+    transition: all 450ms;
+}
 
+footer article i:hover {
+    color:#0022AA;
 }
 
 footer span {
     font-size: var(--parrafos);
+    margin-bottom: 50px;
+
 }
 
 
@@ -304,5 +310,44 @@ footer span {
     }
     .register__first{
         max-width: 700px;
+    }
+
+    .seccion__productos--tarjeta{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        box-shadow: 5px 5px 15px rgba(0,0, 0, 0.3);
+        box-sizing: border-box;
+        margin: 1rem;
+        min-width: 200px;
+        min-height: 236px;
+        width: 50%;
+        flex-grow: 1;
+        transition: all 450ms;
+    }
+    .footer__container--global{
+        display: inherit;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start; 
+        width: 100%;   
+    }
+    .section__footer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;    
+        width: 100%;
+    }
+    .footer__card--container{
+        display: flex;
+        flex-direction: column;
+        max-width: 350px;
+        justify-content: space-between;
+    }
+    .footer__copy{
+        display: inline;
+        position: relative;
+        width: 100%;
     }
 }
